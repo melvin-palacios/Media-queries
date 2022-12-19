@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Open Sans,Arial,sans-serif;
+    margin: 0;
+}
+
+.navbar {
+    margin-top: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 150px;
+    flex-direction: row;
+    z-index: 5000;
+}
+
+/*-------------- header -------------*/
+
+.navbar .nav-left {
+  height: 70%;
+  width: 100%;
+  overflow: hidden;
+  background-position: top;
+  background-size: cover;
+  background-repeat: none;
+  display: flex;
+}
+
+.navbar .nav-left #logo {
+    margin:0;
+
+    z-index: 4000;
+}
+
+.navbar nav{
+    height: 30%;
+    width: 100%;
+    margin-top: -18px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: 18px;
+    justify-content: center;
+}
+
+nav ul li {
+    padding-top: 1%;
+    float: left;
+    width: auto;
+    height: 20px;
+    padding-left:40px;
+    text-align: center;
+    position: relative;
+}
+
+nav ul::after {
+    content: "";
+    display: table;
+    clear: both;
+    padding-top: 10%;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    margin-top: -5px;
+    padding-bottom: 19px;
+}
+
+.sous {
+    display: none;
+    border-radius: 2px;
+    position: absolute;
+    width: 200px;
+    z-index: 1000;
+    margin-top: -7px;
+}
+
+nav >ul :hover .sous {
+    display: block;
+    padding-top: 7%;
+    padding-bottom: 4%;
+    animation: growDown 600ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+.sous li {
+    float: none;
+    width: 100%;
+    text-align: left;
+    padding-right: 20%;
+    padding: 5px;
+}
+
+.sous a {
+    padding: 10px;
+    border-bottom: none;
+}
+
+.deroulant > a::after {
+    margin-top:  30px;
+    font-size: 12px;
+}
+
+/*-------------- footer -------------*/
+
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-size: 582px;
+    background-repeat: no-repeat;
+    background-image: url("imgGen/Armoiries_de_Marseille (1).png");
+    background-position: 50%;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer1 {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.footer .footer1 a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+
+.RS {
+    margin-left: 80%;
+}
+
+.container {
+    max-width: 1050px;
+    width: 90%;
+    margin-top: -53px;
+    z-index: 1000;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+  }
+  
+  .menu-items {
+    display: flex;
+  }
+  
+  .nav-container li {
+    list-style: none;
+  }
+  
+  .nav-container a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+  }
+  
+  .nav-container a:hover{
+      color: rgb(193, 193, 193);
+      transition: 0.8s;
+  }
+  
+  .nav-container {
+    display: block;
+    position: relative;
+    height: 60px;
+  }
+  
+  .nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+    margin-top: -15px;
+  }
+  
+  .nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: -10px;
+  }
+  
+  .nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: white;
+  }
+  
+  .nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .navbar .menu-items {
+    padding-top: 100px;
+    background-color: #097969;
+    height: 100vh;
+    width: 110%;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    margin-top: 10px;
+    padding-left: 50px;
+    transition: transform 0.9s ease-in-out;
+    text-align: center;
+    z-index: 10000;
+  }
+  
+  .navbar .menu-items li {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .logo{
+    display: none;
+  }
+
+  .menu-items h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  @media all and (min-width: 769px){
+    .container {
+        visibility: hidden;
+    }
+}
+
+@media all and (min-width: 361px) and (max-width: 768px){
+    nav ul {
+        visibility: hidden;
+    }
+}
+
+@media all and (max-width: 360px) {
+    nav ul {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+
+  .RS {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+  }
+  .RS a {
+
+      padding: 5px;
+  }
+}
